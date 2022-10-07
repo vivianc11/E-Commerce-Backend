@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
     tag_name: req.body.tag_name
   })
   .then((data) => res.json(data))
-  .catch((err) => res.status(500).json(err);
+  .catch((err) => res.status(500).json(err))
 });
 
 router.put('/:id', (req, res) => {

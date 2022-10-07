@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
       res.json(data);
     }
   })
-  .catch((err) => console.log(err))
+  .catch((err) => res.status(500).json(err))
 });
 
 router.get('/:id', (req, res) => {
