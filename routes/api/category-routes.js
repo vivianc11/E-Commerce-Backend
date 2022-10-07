@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
   .then((data) => {
     if(!data) {
       console.log('No categories found');
+      res.send.json({message: 'No categories found'})
       return;
     } else {
       res.json(data);
@@ -37,7 +38,8 @@ router.get('/:id', (req, res) => {
   })
   .then((data) => {
     if(!data) {
-      console.log('No categories found')
+      console.log('No categories found');
+      res.send.json({message: 'No categories found'})
     } else {
       res.json(data)
     }
@@ -63,7 +65,8 @@ router.put('/:id', (req, res) => {
   })
   .then((data) => {
     if(!data) {
-      console.log('No categories found')
+      console.log('No categories found');
+      res.send.json({message: 'No categories found'})
     } else {
       res.json(data)
     }
