@@ -35,4 +35,4 @@ THEN I am able to successfully create, update, and delete data in my database
 
 - Establishing API routes for RESTful CRUD operations
 
-## Walkthrough Video
+## Walkthrough Video through [Screencastify](https://drive.google.com/file/d/1FAjYP39_2srVtjCqVFr9QbJ7uZKbRsgy/view)

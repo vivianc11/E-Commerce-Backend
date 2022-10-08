@@ -30,7 +30,6 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Category and Tag data
   Product.findOne({
     where: {id: req.params.id},
-    attributes: ['id', 'product_name', 'price', 'stock'],
     include: [
       {
         model: Category,
@@ -45,9 +44,12 @@ router.get('/:id', (req, res) => {
   .then((data) => {
     if(!data) {
       console.log('No product with this id')
-
+      res.send.json({message: 'No products found'})
+    } else {
+      res.json(data)
     }
   })
+  .catch((err) => console.log(err))
 });
 
 // create new product
