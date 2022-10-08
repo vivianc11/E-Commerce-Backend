@@ -13,11 +13,13 @@ router.get('/', (req, res) => {
     }
   })
   .then((data) => {
+    // If there is no data
     if(!data) {
       console.log('No categories found');
       res.send.json({message: 'No categories found'})
       return;
     } else {
+      // present the data
       res.json(data);
     }
   })
